@@ -1,0 +1,27 @@
+{
+  "accountAssociation": {
+    "header": "eyJmaWQiOjQ0NDcxMCwidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweEI5QzREMGI3OTVmN0M3Y2RFMTBGNDdlNTgwNjNkYTAwRTUwMEFEODAifQ",
+    "payload": "eyJkb21haW4iOiJ3YXJwdW5rLnBhZ2VzLmRldiJ9",
+    "signature": "OO2os+M62PmDiWEuxfWBIHPFCLUO7VT4QSvo6FPBlUcg3h44SfPmHSD7MxwiCsiMNabdzGB1/vFy2ax7blXsfxs="
+  },
+  "frame": {
+    "version": "1",
+    "name": "Warpunk",
+    "iconUrl": "https://warpunk.pages.dev/warpunk.png",
+    "homeUrl": "https://warpunk.pages.dev",
+    "imageUrl": "https://warpunk.pages.dev/im.png",
+    "buttonTitle": "Mint Now",
+    "splashImageUrl": "https://warpunk.pages.dev/warpunk.png",
+    "splashBackgroundColor": "#eeccff",
+    "webhookUrl": "https://api.neynar.com/f/app/22ba2dc6-56e0-4de5-a59d-551323ab4d07/event",
+    "description": "Warpunk NFT",
+    "screenshotUrls": [],
+     "primaryCategory": "art-creativity",
+    "tags": ["art","nft","mint"],
+    "heroImageUrl": "https://warpunk.pages.dev/warpunk.png",
+    "tagline": "Warpunk",
+    "ogTitle": "Warpunk",
+    "ogDescription": "Warpunk NFT PFP",
+    "ogImageUrl": "https://warpunk.pages.dev/warpunk.png"
+  }
+}
