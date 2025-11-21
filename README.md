@@ -26,6 +26,7 @@ This repository contains the full MiniApp frontend built with:
 - 🟣 Wagmi + Viem  
 - ⚡ Farcaster MiniApp SDK  
 - 🚀 Vite  
+- 👛 Reown Appkit
 
 Contract ABI: **`abi/warpunk.sol`**  
 Generated ABI for frontend: **`abi/NFT.ts`**
@@ -104,7 +105,7 @@ npm run build
 Create a `.env` file:
 
 ```
-FARCASTER_API_KEY=xxxx
+NEYNAR=xxxx
 GENERATION_SERVER_URL=https://your-ai-endpoint.xyz
 GENERATION_PRIVATE_KEY=0x...
 ```
@@ -115,9 +116,9 @@ GENERATION_PRIVATE_KEY=0x...
 
 | Route | Purpose |
 |-------|---------|
-| `/api/getFarcasterProfile` | Fetch user FID + PFP |
-| `/api/getGeneratedData` | Get cached Warpunk image |
-| `/api/generateAndSign` | Generate AI art + backend signature |
+| `/api/Farcaster` | Fetch user FID + PFP |
+| `/api/Generated` | Get cached Warpunk image |
+| `/api/AiSign` | Generate AI art + backend signature |
 
 ---
 
@@ -189,8 +190,3 @@ Open an issue for feature requests or bugs.
 Built by **tose** & Warpunk contributors.  
 Cyberpunk x Farcaster inspired project.
 
----
-
-## ⭐ License
-
-MIT License.
