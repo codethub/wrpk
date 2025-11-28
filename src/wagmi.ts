@@ -5,7 +5,7 @@ import { base } from 'wagmi/chains'
 import { farcasterMiniApp as miniAppConnector } from '@farcaster/miniapp-wagmi-connector'
 
 
-const projectId = "your_project_id"; // get your project id on reown.com
+const projectId = "e92cd95903697faa0452d626c1b1a673"; // get your project id on reown.com
  
 export const wagmiAdapter = new WagmiAdapter({
   projectId,
