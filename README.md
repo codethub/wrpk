@@ -59,6 +59,10 @@ Generated ABI for frontend: **`abi/NFT.ts`**
 ## 🧩 Project Structure
 
 ```
+ ├── api/
+ │   ├── Cache.ts
+ │   ├── Farcaster.ts
+ │   └── Warpunk.ts
 src/
  ├── components/
  │    ├── Layout.tsx
@@ -105,9 +109,10 @@ npm run build
 Create a `.env` file:
 
 ```
-NEYNAR=xxxx
-GENERATION_SERVER_URL=https://your-ai-endpoint.xyz
-GENERATION_PRIVATE_KEY=0x...
+NEYNAR_API_KEY=...
+SERVER_PRIVATE_KEY=0x..
+REPLICATE_API_TOKEN=...
+IPFS_API_KEY=...
 ```
 
 ---
@@ -117,8 +122,8 @@ GENERATION_PRIVATE_KEY=0x...
 | Route | Purpose |
 |-------|---------|
 | `/api/Farcaster` | Fetch user FID + PFP |
-| `/api/Generated` | Get cached Warpunk image |
-| `/api/AiSign` | Generate AI art + backend signature |
+| `/api/Cache` | Get cached Warpunk image |
+| `/api/Warpunk` | Generate AI art + backend signature |
 
 ---
 
