@@ -24,7 +24,7 @@ export async function getUniversalConnector() {
     projectId,
     metadata: {
       name: 'Universal Connector',
-      description: 'Universal Connector',
+      description: 'Universal Connector by reown',
       url: 'https://appkit.reown.com',
       icons: ['https://appkit.reown.com/icon.png']
     },

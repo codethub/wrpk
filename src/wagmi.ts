@@ -25,9 +25,6 @@ createAppKit({
     url: "https://warpunk.dev.pages/",
     icons: ["https://warpunk.dev.pages/warpunk.png"],
   },
-  features: {
-    
-  },
   themeMode: "dark",
 });
 
