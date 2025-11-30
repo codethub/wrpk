@@ -183,7 +183,7 @@ export default function Mint() {
       setIsLoadingCache(true);
       setGeneratedImage(undefined);
       
-      fetch(`/api/GeneratedData?fid=${profile.fid}`)
+      fetch(`/api/Cache?fid=${profile.fid}`)
         .then(async (res) => {
           if (res.ok) {
             const data: { url: string } = await res.json();
@@ -221,7 +221,7 @@ export default function Mint() {
     setUrlToMint(null);
 
     try {
-      const response = await fetch('/api/genSign', {
+      const response = await fetch('/api/Warpunk', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -273,7 +273,7 @@ export default function Mint() {
     setUiError(null);
 
     try {
-      const response = await fetch('/api/genSign', {
+      const response = await fetch('/api/Warpunk', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
