@@ -192,6 +192,9 @@ Open an issue for feature requests or bugs.
 
 ## 🧟 Credits
 
-Built by **tose** & Warpunk contributors.  
+Built by **tose** & Warpunk contributors. 
 Cyberpunk x Farcaster inspired project.
+
+[Farcaster](https://farcaster.xyz/tose)
+[Github](https://github.com/codethub)
 
