@@ -144,7 +144,7 @@ export default function Layout() {
       <Header />
 
       <div className={contentStyle}>
-        {currentPage === 'about' ? <About /> : <Mint />}
+        {currentPage === 'mint' ? <About /> : <Mint />}
       </div>
 
       <Footer currentPage={currentPage} setPage={setCurrentPage} />
