@@ -1,7 +1,7 @@
-//
+// Layout.tsx
 import { useState } from 'react';
 import { useAccount, useConnect, useDisconnect } from 'wagmi';
-import { Ghost, Copy, LogOut, HelpCircle, Aperture, Box } from 'lucide-react'; // Import Box for Airdrop icon
+import { Ghost, Copy, LogOut, HelpCircle, Aperture, Box } from 'lucide-react'; 
 import About from './About';
 import Mint from './Mint';
 import Airdrop from './Soon'; 
@@ -144,7 +144,7 @@ const Footer = ({ currentPage, setPage }: { currentPage: Page, setPage: (page: P
 
 export default function Layout() {
   
-  const [currentPage, setCurrentPage] = useState<Page>('mint'); 
+  const [currentPage, setCurrentPage] = useState<Page>('about'); 
 
   
   const contentStyle = "min-h-[calc(100vh-100px)] pt-16 pb-20"; 
