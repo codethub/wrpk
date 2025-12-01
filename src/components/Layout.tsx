@@ -1,3 +1,4 @@
+//
 import { useState } from 'react';
 import { useAccount, useConnect, useDisconnect } from 'wagmi';
 import { Ghost, Copy, LogOut, HelpCircle, Aperture, Box } from 'lucide-react'; // Import Box for Airdrop icon
@@ -78,6 +79,7 @@ function ConnectMenu() {
     </button>
   );
 }
+
 
 
 const Header = () => (
