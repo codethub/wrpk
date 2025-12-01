@@ -4,7 +4,7 @@ import { useAccount, useConnect, useDisconnect } from 'wagmi';
 import { Ghost, Copy, LogOut, HelpCircle, Aperture, Box } from 'lucide-react'; // Import Box for Airdrop icon
 import About from './About';
 import Mint from './Mint';
-import Airdrop from './Airdrop'; 
+import Airdrop from './Soon'; 
 
 
 type Page = 'about' | 'mint' | 'airdrop'; 
