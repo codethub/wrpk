@@ -15,7 +15,7 @@ export default function Airdrop() {
 
       <div className="mt-10 text-center space-y-4 max-w-lg">
         <h2 className="text-4xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-white via-cyan-100 to-slate-400">
-          AIRDROP SYSTEM
+          AIRDROP
         </h2>
         
         <div className="inline-flex items-center gap-2 px-3 py-1 bg-slate-800/50 border border-slate-700 rounded-full text-xs font-mono text-slate-400 uppercase tracking-widest">
