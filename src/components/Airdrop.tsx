@@ -1,16 +1,16 @@
-import { Box, CheckCircle, Wallet, Coins, XCircle } from 'lucide-react';
+import { Box, CheckCircle, Wallet, Coins, XCircle, Users } from 'lucide-react';
 import { useAccount, useReadContract, useWriteContract, useWaitForTransactionReceipt } from 'wagmi';
-import { formatEther } from 'viem';
 import type { Address } from 'viem';
 import { DropAbi } from '../abi/DROP';
 
 const AIRDROP_CONTRACT_ADDRESS: Address = "0x36238691178d30EDC3791a817eB34E1807058959"; 
 const CHAIN_ID = 8453;
+const TOTAL_AIRDROP_SUPPLY = "30,000,000,000";
 
 export default function Airdrop() {
     const { isConnected, chainId } = useAccount();
 
-    const { data: currentFeeWei, isLoading: isFeeLoading } = useReadContract({
+    const { data: currentFeeWei } = useReadContract({
         abi: DropAbi,
         address: AIRDROP_CONTRACT_ADDRESS,
         functionName: 'claimFee',
@@ -34,8 +34,6 @@ export default function Airdrop() {
             chainId: CHAIN_ID,
         });
     };
-
-    const formattedFee = currentFeeWei ? formatEther(currentFeeWei) : '...';
     
     const isChainCorrect = chainId === CHAIN_ID;
     
@@ -44,7 +42,7 @@ export default function Airdrop() {
         !isChainCorrect || 
         isClaimPending || 
         isConfirming ||
-        isConfirmed; // Disable button after successful confirmation
+        isConfirmed;
 
     const getButtonText = () => {
         if (!isConnected) return "Connect Wallet to Start";
@@ -82,23 +80,28 @@ export default function Airdrop() {
                 <div className="pt-4 space-y-3 p-4 bg-slate-900/50 rounded-lg border border-slate-800">
                     <div className="flex justify-between items-center text-slate-300">
                         <div className="flex items-center gap-2">
+                            <Users size={18} className="text-pink-400" />
+                            <span className="font-semibold">Total Airdrop Supply</span>
+                        </div>
+                        <span className="text-lg font-mono text-pink-400">{TOTAL_AIRDROP_SUPPLY} WPRK</span>
+                    </div>
+
+                    <div className="flex justify-between items-center text-slate-300">
+                        <div className="flex items-center gap-2">
                             <CheckCircle size={18} className="text-green-400" />
-                            <span className="font-semibold">Token Reward</span>
+                            <span className="font-semibold">Token Reward per Wallet</span>
                         </div>
                         <span className="text-lg font-mono text-cyan-400">1,000,000 WPRK</span>
                     </div>
                     
-                    <div className="flex justify-between items-center text-slate-300">
+                    <div className="flex justify-between items-center text-slate-500 text-sm italic pt-2">
                         <div className="flex items-center gap-2">
-                            <Wallet size={18} className="text-yellow-400" />
-                            <span className="font-semibold">Claim Fee (Network)</span>
+                            <Wallet size={16} className="text-slate-500" />
+                            <span>*A minimal Network Gas Fee is required for the transaction.</span>
                         </div>
-                        <span className="text-lg font-mono text-yellow-400">
-                            {isFeeLoading ? 'Loading...' : `${formattedFee} ETH`}
-                        </span>
                     </div>
 
-                    <div className="flex justify-between items-center text-slate-300">
+                    <div className="flex justify-between items-center text-slate-300 pt-2">
                         <div className="flex items-center gap-2">
                             <CheckCircle size={18} className="text-blue-500" />
                             <span className="font-semibold">Claim Limit</span>
