@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { useAccount, useConnect, useDisconnect } from 'wagmi';
-import { Ghost, Copy, LogOut, HelpCircle, Aperture } from 'lucide-react';
+import { Ghost, Copy, LogOut, HelpCircle, Aperture, Box } from 'lucide-react'; // Import Box for Airdrop icon
 import About from './About';
 import Mint from './Mint';
+import Airdrop from './Airdrop'; 
 
-type Page = 'about' | 'mint';
 
+type Page = 'about' | 'mint' | 'airdrop'; 
 
 
 function ConnectMenu() {
@@ -78,6 +79,7 @@ function ConnectMenu() {
   );
 }
 
+
 const Header = () => (
   <header className="border-b border-slate-800 bg-slate-950/80 backdrop-blur-md sticky top-0 z-50">
     <div className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -126,25 +128,33 @@ const Footer = ({ currentPage, setPage }: { currentPage: Page, setPage: (page: P
         active={currentPage === 'mint'} 
         onClick={() => setPage('mint')} 
       />
+      <NavItem 
+        page="airdrop" 
+        icon={Box} 
+        label="AIRDROP" 
+        active={currentPage === 'airdrop'} 
+        onClick={() => setPage('airdrop')} 
+      />
     </div>
   </footer>
 );
 
 
 export default function Layout() {
-  const [currentPage, setCurrentPage] = useState<Page>('about'); 
-
- 
-  const contentStyle = "min-h-[calc(100vh-100px)] pt-16 pb-20"; 
+  
+  const [currentPage, setCurrentPage] = useState<Page>('mint'); 
 
   
+  const contentStyle = "min-h-[calc(100vh-100px)] pt-16 pb-20"; 
 
   return (
     <div className="w-full min-h-screen flex flex-col bg-slate-950 text-white font-mono selection:bg-cyan-500/30 overflow-x-hidden bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-900 via-slate-950 to-black">
       <Header />
 
       <div className={contentStyle}>
-        {currentPage === 'mint' ? <About /> : <Mint />}
+        {currentPage === 'about' && <About />}
+        {currentPage === 'mint' && <Mint />}
+        {currentPage === 'airdrop' && <Airdrop />} 
       </div>
 
       <Footer currentPage={currentPage} setPage={setCurrentPage} />
