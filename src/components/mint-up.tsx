@@ -307,7 +307,7 @@ export default function MintUp() {
     if (isMinting) return "Check Wallet...";
     if (isConfirming) return "Minting...";
     if (isFreeMint) return "Free Mint";
-    return `Mint NFT (${formattedMintPrice} HYPE)`;
+    return `Mint NFT (${formattedMintPrice} ETH)`;
   }, [isMinting, isConfirming, isFreeMint, formattedMintPrice]);
 
   return (
@@ -441,7 +441,7 @@ export default function MintUp() {
                           <div className="p-4 bg-slate-800/50 border border-slate-700 rounded-lg text-left shadow-lg">
                             <p className="text-xs font-bold uppercase text-slate-400 mb-1">MINT PRICE</p>
                             <p className="text-xl font-black text-cyan-300">
-                              {isFreeMint ? 'FREE' : `${formattedMintPrice} HYPE`}
+                              {isFreeMint ? 'FREE' : `${formattedMintPrice} ETH`}
                             </p>
                           </div>
                           <div className="p-4 bg-slate-800/50 border border-slate-700 rounded-lg text-left shadow-lg relative">
